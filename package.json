@@ -2,8 +2,9 @@
   "name": "readme-navigator",
   "displayName": "Readme Navigator",
   "description": "Quick access to all project Markdown files.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "Z3rlik",
+  "icon": "icon.png",
   "license": "MIT",
   "repository": {
     "type": "git",

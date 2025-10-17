@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.1.1] - 2025-10-17
+
+### Changed
+- Added extension icon.
+
 ## [0.1.0] - 2025-10-17
 
 ### Added
