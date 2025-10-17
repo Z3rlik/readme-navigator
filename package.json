@@ -1,0 +1,114 @@
+{
+  "name": "readme-navigator",
+  "displayName": "Readme Navigator",
+  "description": "Quick access to all project Markdown files.",
+  "version": "0.1.0",
+  "publisher": "Z3rlik",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Z3rlik/readme-navigator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Z3rlik/readme-navigator/issues"
+  },
+  "homepage": "https://github.com/Z3rlik/readme-navigator#readme",
+  "keywords": [
+    "markdown",
+    "readme",
+    "navigation",
+    "tree-view",
+    "file-explorer"
+  ],
+  "engines": {
+    "vscode": "^1.104.3"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "readmeNavigator.refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "readmeNavigator.search",
+        "title": "Search...",
+        "icon": "$(search)"
+      },
+      {
+        "command": "readmeNavigator.setModeAll",
+        "title": "Show All .md Files",
+        "icon": "$(list-selection)"
+      },
+      {
+        "command": "readmeNavigator.setModeReadme",
+        "title": "Show READMEs Only",
+        "icon": "$(book)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "readmeNavigator.search",
+          "group": "navigation@1"
+        },
+        {
+          "command": "readmeNavigator.setModeAll",
+          "when": "view == readmeNavigatorView && readmeNavigator.mode == 'readme'",
+          "group": "navigation@2"
+        },
+        {
+          "command": "readmeNavigator.setModeReadme",
+          "when": "view == readmeNavigatorView && readmeNavigator.mode == 'all'",
+          "group": "navigation@2"
+        },
+        {
+          "command": "readmeNavigator.refresh",
+          "group": "navigation@3"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "readme-navigator-container",
+          "title": "Readme Navigator",
+          "icon": "$(book)"
+        }
+      ]
+    },
+    "views": {
+      "readme-navigator-container": [
+        {
+          "id": "readmeNavigatorView",
+          "name": "Markdown Files",
+          "contextualTitle": "Readme Navigator"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.105.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.36.0",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
