@@ -4,7 +4,7 @@ A VS Code extension created to organize and easily access all .md files in your 
 
 ## Screenshot
 
-![Readme Navigator - Tree View](images/captura1.png)
+![Readme Navigator - Tree View](https://raw.githubusercontent.com/Z3rlik/readme-navigator/master/images/captura1.png)
 
 
 ## Features
@@ -21,6 +21,8 @@ A VS Code extension created to organize and easily access all .md files in your 
 3. **Click and explore!** Use the filter and search buttons to navigate through your Markdown files
 
 ### Available controls
+
+![Readme Navigator - Search and Filter](https://raw.githubusercontent.com/Z3rlik/readme-navigator/master/images/captura2.png)
 
 The extension toolbar shows 3 icons that provide the following functionality:
 
